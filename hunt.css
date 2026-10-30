@@ -78,9 +78,6 @@ img {
   background: var(--purple-light);
 }
 
-/* ==========================================
-   Photos: put your image path in --img. Gradient shows if the image is missing
-   ========================================== */
 .photo {
   background: var(--img, none) center/cover no-repeat, linear-gradient(135deg, #d9cdee, #b9a4de);
 }
