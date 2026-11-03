@@ -1,0 +1,257 @@
+/* ==========================================
+   Listings page styles
+   Needs hunt.css loaded first (colors, buttons, navbar, footer, room cards)
+   ========================================== */
+
+.listings {
+  padding: 40px 0 72px;
+}
+
+.listings-layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+
+/* ==========================================
+   Filters sidebar
+   ========================================== */
+
+.filters {
+  background: #fff;
+  border: 1px solid #e3dcef;
+  border-radius: 12px;
+  padding: 20px;
+  position: sticky;
+  top: 84px;
+  font-size: 13px;
+}
+
+.filters-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.filters-head h2 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.reset {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font: 400 12px Poppins, sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.reset:hover {
+  color: var(--purple);
+}
+
+.field {
+  border: none;
+  padding: 0 0 18px;
+  margin: 0 0 18px;
+  border-bottom: 1px solid #eee8f6;
+}
+
+.field:last-of-type {
+  border-bottom: none;
+}
+
+.field label,
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.small {
+  font-weight: 400;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.field select,
+.field input[type="number"] {
+  width: 100%;
+  font: 400 13px Poppins, sans-serif;
+  color: var(--text);
+  padding: 8px 10px;
+  border: 1px solid #cfc3e4;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.range {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.check input {
+  accent-color: var(--purple);
+  width: 15px;
+  height: 15px;
+}
+
+.count {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.seg {
+  display: flex;
+  gap: 6px;
+}
+
+.seg button {
+  flex: 1;
+  padding: 6px 0;
+  border: 1px solid #cfc3e4;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+  font: 400 12px Poppins, sans-serif;
+  cursor: pointer;
+}
+
+.seg button.active {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: #fff;
+}
+
+.show {
+  width: 100%;
+  text-align: center;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   Results grid
+   ========================================== */
+
+.results-info {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Reuse the room card from the home page, but let it fill the grid cell */
+.listing-grid .room {
+  flex: none;
+  min-width: 0;
+}
+
+.listing-grid .photo {
+  height: 160px;
+}
+
+.empty {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+
+/* ==========================================
+   Pagination
+   ========================================== */
+
+.pager {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.pager button {
+  min-width: 40px;
+  height: 40px;
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--purple);
+  font: 500 15px Poppins, sans-serif;
+  cursor: pointer;
+}
+
+.pager button:hover:not(:disabled) {
+  background: var(--purple-light);
+}
+
+.pager button.active {
+  background: var(--purple);
+  color: #fff;
+}
+
+.pager button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* ==========================================
+   Tablet
+   ========================================== */
+
+@media (max-width: 1024px) {
+  .listings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    position: static;
+  }
+
+  .listing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ==========================================
+   Mobile
+   ========================================== */
+
+@media (max-width: 720px) {
+  .listings {
+    padding: 24px 0 56px;
+  }
+
+  .listing-grid {
+    grid-template-columns: 1fr;
+  }
+}

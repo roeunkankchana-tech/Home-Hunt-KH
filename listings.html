@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listings | Home Hunt KH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Shared styles from the home page, then this page's own styles -->
+<link rel="stylesheet" href="hunt.css">
+<link rel="stylesheet" href="listings.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="Home Hunt KH">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+      Home Hunt KH
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html" aria-current="page">Listings</a></li>
+        <li><a href="index.html#contact">Book a visit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="listings">
+  <div class="container listings-layout">
+
+    <!-- Filters -->
+    <aside class="filters" aria-label="Filters">
+      <div class="filters-head">
+        <h2>Refine your search</h2>
+        <button type="button" class="reset" id="reset">Reset all</button>
+      </div>
+
+      <div class="field">
+        <label for="area">Location</label>
+        <select id="area">
+          <option value="">All of Phnom Penh</option>
+          <option>Toul Kork</option>
+          <option>BKK1</option>
+          <option>Sen Sok</option>
+          <option>Chamkarmon</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <span class="label">Monthly budget (USD)</span>
+        <div class="range">
+          <div>
+            <label for="min" class="small">Minimum</label>
+            <input type="number" id="min" min="0" placeholder="$0">
+          </div>
+          <div>
+            <label for="max" class="small">Maximum</label>
+            <input type="number" id="max" min="0" placeholder="No limit">
+          </div>
+        </div>
+      </div>
+
+      <fieldset class="field">
+        <legend class="label">Property type</legend>
+        <label class="check"><input type="checkbox" name="type" value="apartment"> Apartments <span class="count" data-count-type="apartment"></span></label>
+        <label class="check"><input type="checkbox" name="type" value="studio"> Studios <span class="count" data-count-type="studio"></span></label>
+        <label class="check"><input type="checkbox" name="type" value="house"> Houses &amp; villas <span class="count" data-count-type="house"></span></label>
+        <label class="check"><input type="checkbox" name="type" value="townhouse"> Townhouses <span class="count" data-count-type="townhouse"></span></label>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="label">Bedrooms</legend>
+        <div class="seg" id="beds">
+          <button type="button" class="active" data-beds="0">Any</button>
+          <button type="button" data-beds="1">1</button>
+          <button type="button" data-beds="2">2</button>
+          <button type="button" data-beds="3">3+</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="label">Make yourself at home</legend>
+        <label class="check"><input type="checkbox" name="perk" value="furnished"> Furnished</label>
+        <label class="check"><input type="checkbox" name="perk" value="pets"> Pet-friendly</label>
+        <label class="check"><input type="checkbox" name="perk" value="balcony"> Balcony or garden</label>
+        <label class="check"><input type="checkbox" name="perk" value="parking"> Parking</label>
+      </fieldset>
+
+      <div class="field">
+        <label for="lease">Lease length</label>
+        <select id="lease">
+          <option value="99">Any length</option>
+          <option value="3">3 months or longer</option>
+          <option value="6">6 months or longer</option>
+          <option value="12">12 months or longer</option>
+        </select>
+      </div>
+
+      <button type="button" class="btn btn-primary show" id="show">Show homes</button>
+      <p class="note">Availability and lease terms should be confirmed before arranging a viewing.</p>
+    </aside>
+
+    <!-- Results -->
+    <section aria-label="Results">
+      <p class="results-info" id="info" aria-live="polite"></p>
+      <div class="listing-grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>No rooms match your search. Try changing or resetting the filters.</p>
+      <nav class="pager" id="pager" aria-label="Pages"></nav>
+    </section>
+
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a href="index.html" class="logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+          Home Hunt KH
+        </a>
+        <p class="slogan">Find Your Perfect Place</p>
+        <p>We provide safe, comfortable and affordable rooms and condos for students and young workers in Phnom Penh. Your trusted partner in finding a better home.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Telegram">t</a>
+          <a href="#" aria-label="TikTok">tk</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="#">Property details</a></li>
+          <li><a href="#contact">Book a visit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Areas</h4>
+        <ul>
+          <li><a href="#">Toul Kork</a></li>
+          <li><a href="#">BKK1</a></li>
+          <li><a href="#">Sen Sok</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul>
+          <li>Toul Kork, Phnom Penh, Cambodia</li>
+          <li><a href="tel:+85512345678">+855 12 345 678</a></li>
+          <li><a href="mailto:info@homehuntkh.com">info@homehuntkh.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>&copy; 2026 Home Hunt KH. All rights reserved.</span>
+      <span>Better Homes &bull; Brighter Futures</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- Your rooms. Add, edit or delete rows here ---------- */
+const LISTINGS = [
+  { title: "Sunny Room Near RUPP", area: "Toul Kork",  size: 20, price: 150, type: "apartment", beds: 1, perks: ["furnished"],                       lease: 6,  img: "images/listing1.jpg" },
+  { title: "Garden Room",          area: "Toul Kork",  size: 18, price: 130, type: "house",     beds: 1, perks: ["balcony", "pets"],                 lease: 3,  img: "images/listing2.jpg" },
+  { title: "Blue Door Studio",     area: "Toul Kork",  size: 28, price: 220, type: "studio",    beds: 1, perks: ["furnished"],                       lease: 6,  img: "images/listing3.jpg" },
+  { title: "Quiet Room Sen Sok",   area: "Sen Sok",    size: 16, price: 110, type: "apartment", beds: 1, perks: [],                                  lease: 3,  img: "images/listing4.jpg" },
+  { title: "Small Studio BKK1",    area: "BKK1",       size: 25, price: 280, type: "studio",    beds: 1, perks: ["furnished", "parking"],            lease: 6,  img: "images/listing5.jpg" },
+  { title: "Shared Room for 2",    area: "BKK1",       size: 22, price: 120, type: "apartment", beds: 2, perks: [],                                  lease: 3,  img: "images/listing6.jpg" },
+  { title: "Family Condo",         area: "Sen Sok",    size: 60, price: 380, type: "apartment", beds: 3, perks: ["furnished", "parking", "pets"],    lease: 12, img: "images/listing7.jpg" },
+  { title: "Student Room",         area: "Sen Sok",    size: 20, price: 140, type: "apartment", beds: 1, perks: ["furnished"],                       lease: 3,  img: "images/listing8.jpg" },
+  { title: "Bright Studio",        area: "Sen Sok",    size: 30, price: 240, type: "studio",    beds: 1, perks: ["furnished"],                       lease: 6,  img: "images/listing9.jpg" },
+  { title: "Family Townhouse",     area: "Chamkarmon", size: 80, price: 450, type: "townhouse", beds: 3, perks: ["parking", "balcony"],              lease: 12, img: "images/listing10.jpg" },
+  { title: "Cozy Room Chamkarmon", area: "Chamkarmon", size: 18, price: 160, type: "apartment", beds: 1, perks: [],                                  lease: 3,  img: "images/listing11.jpg" },
+  { title: "Riverside Studio",     area: "BKK1",       size: 32, price: 320, type: "studio",    beds: 1, perks: ["furnished", "balcony"],            lease: 6,  img: "images/listing12.jpg" }
+];
+
+const PER_PAGE = 9;
+let page = 1;
+let minBeds = 0;
+
+const $ = (id) => document.getElementById(id);
+
+/* Read the current filter values and return the matching rooms */
+function getMatches() {
+  const area = $("area").value;
+  const min = parseFloat($("min").value) || 0;
+  const max = parseFloat($("max").value) || Infinity;
+  const types = [...document.querySelectorAll('input[name="type"]:checked')].map(c => c.value);
+  const perks = [...document.querySelectorAll('input[name="perk"]:checked')].map(c => c.value);
+  const lease = parseInt($("lease").value, 10);
+
+  return LISTINGS.filter(r =>
+    (!area || r.area === area) &&
+    r.price >= min && r.price <= max &&
+    (!types.length || types.includes(r.type)) &&
+    (minBeds === 0 || (minBeds === 3 ? r.beds >= 3 : r.beds === minBeds)) &&
+    perks.every(p => r.perks.includes(p)) &&
+    r.lease <= lease
+  );
+}
+
+function cardHTML(r) {
+  return `
+    <article class="room">
+      <div class="photo">
+        <img src="${r.img}" alt="${r.title}" loading="lazy" onerror="this.style.display='none'">
+        <span class="tag">${r.area}</span>
+      </div>
+      <div class="info">
+        <h3>${r.title}</h3>
+        <span class="meta">Room · ${r.size} m²</span>
+        <span class="meta">$${r.price} / month</span>
+        <a href="#" class="btn">See Details</a>
+      </div>
+    </article>`;
+}
+
+function render() {
+  const matches = getMatches();
+  const pages = Math.max(1, Math.ceil(matches.length / PER_PAGE));
+  if (page > pages) page = pages;
+
+  const slice = matches.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+  $("grid").innerHTML = slice.map(cardHTML).join("");
+  $("empty").hidden = matches.length > 0;
+  $("info").textContent = `${matches.length} ${matches.length === 1 ? "room" : "rooms"} found`;
+  $("show").textContent = `Show ${matches.length} ${matches.length === 1 ? "home" : "homes"}`;
+
+  // Pagination
+  let html = "";
+  if (pages > 1) {
+    html += `<button type="button" data-page="${page - 1}" aria-label="Previous page" ${page === 1 ? "disabled" : ""}>&#8249;</button>`;
+    for (let i = 1; i <= pages; i++) {
+      html += `<button type="button" data-page="${i}" ${i === page ? 'class="active" aria-current="page"' : ""}>${i}</button>`;
+    }
+    html += `<button type="button" data-page="${page + 1}" aria-label="Next page" ${page === pages ? "disabled" : ""}>&#8250;</button>`;
+  }
+  $("pager").innerHTML = html;
+}
+
+/* Count rooms per property type (the numbers next to the checkboxes) */
+document.querySelectorAll("[data-count-type]").forEach(el => {
+  el.textContent = LISTINGS.filter(r => r.type === el.dataset.countType).length;
+});
+
+/* Events */
+document.querySelectorAll(".filters input, .filters select").forEach(el => {
+  el.addEventListener("input", () => { page = 1; render(); });
+});
+
+$("beds").addEventListener("click", (e) => {
+  const b = e.target.closest("button");
+  if (!b) return;
+  minBeds = parseInt(b.dataset.beds, 10);
+  document.querySelectorAll("#beds button").forEach(x => x.classList.toggle("active", x === b));
+  page = 1;
+  render();
+});
+
+$("pager").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-page]");
+  if (!b || b.disabled) return;
+  page = parseInt(b.dataset.page, 10);
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+$("show").addEventListener("click", () => {
+  document.querySelector(".results-info").scrollIntoView({ behavior: "smooth" });
+});
+
+$("reset").addEventListener("click", () => {
+  document.querySelectorAll(".filters input[type=checkbox]").forEach(c => c.checked = false);
+  document.querySelectorAll(".filters input[type=number]").forEach(n => n.value = "");
+  $("area").value = "";
+  $("lease").value = "99";
+  minBeds = 0;
+  document.querySelectorAll("#beds button").forEach((x, i) => x.classList.toggle("active", i === 0));
+  page = 1;
+  render();
+});
+
+render();
+</script>
+</body>
+</html>
