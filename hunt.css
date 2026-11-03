@@ -45,7 +45,7 @@ img {
 :focus-visible {
   outline: 3px solid #B79CFF;
   outline-offset: 2px;
-}
+} 
 
 /* ==========================================
    Buttons
@@ -96,7 +96,7 @@ img {
 .nav .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
   height: 64px;
 }
 
