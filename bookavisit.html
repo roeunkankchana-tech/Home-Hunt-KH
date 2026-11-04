@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booka visit</title>
+    <link rel="stylesheet" href="/bookavisit.css">
+</head>
+<body>
+    <header class="nav">
+    <div class="container">
+      <a href="#" class="logo" aria-lagitbel="Home Hunt KH">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 11l9-8 9 8" />
+          <path d="M5 10v10h14V10" />
+          <path d="M10 20v-6h4v6" />
+        </svg>
+        Home Hunt KH
+      </a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#" aria-current="page">Home</a></li>
+          <li><a href="#featured">Listings</a></li>
+          <li><a href="#contact">Book a visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<main>
+
+<main class="booking-page">
+    <section class="booking-hero">
+        <div class="hero-content">
+            <span class="hero-label">YOUR NEXT PLACE?</span>
+
+            <h1>Visit before<br>you decide.</h1>
+
+            <p>
+                Find a room that feels right. Choose a time to see it
+                in person — our local team will help you take the next step.
+            </p>
+
+            <div class="hero-features">
+                <span>✓ Free to visit</span>
+                <span>✓ No pressure to rent</span>
+            </div>
+
+            <a href="#booking-form" class="hero-button">
+                Book a visit <span>→</span>
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80"
+                alt="Comfortable room available for rent"
+            >
+
+            <div class="image-badge">
+                <span class="badge-icon">✓</span>
+                <div>
+                    <strong>Checked rooms</strong>
+                    <small>Real photos · Clear prices</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="booking-section" id="booking-form">
+
+        <div class="section-heading">
+            <span class="section-label">BOOK YOUR VISIT</span>
+            <h2>Let's find your next home.</h2>
+            <p>Fill in the details below to arrange your room visit.</p>
+        </div>
+        <div class="booking-layout">
+            <form class="booking-form" id="visitForm">
+                <div class="form-step">
+
+                    <div class="step-heading">
+                        <span class="step-number">1</span>
+
+                        <div>
+                            <h3>Choose your room</h3>
+                            <p>Select the property you want to visit.</p>
+                        </div>
+                    </div>
+
+                    <label for="property">Property <span>*</span></label>
+
+                    <select id="property" name="property" required>
+                        <option value="">Choose a room</option>
+                        <option value="Sunny room near RUPP">
+                            Sunny room near RUPP · Toul Kork
+                        </option>
+                        <option value="Modern studio in BKK1">
+                            Modern studio · BKK1
+                        </option>
+                        <option value="Comfortable room in Sen Sok">
+                            Comfortable room · Sen Sok
+                        </option>
+                    </select>
+
+                    <div class="room-preview">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=400&q=80"
+                            alt="Sunny room near RUPP"
+                            id="roomImage"
+                        >
+
+                        <div class="room-info">
+                            <span class="room-location" id="roomLocation">
+                                Toul Kork
+                            </span>
+
+                            <h4 id="roomName">Sunny room near RUPP</h4>
+
+                            <p id="roomSize">Room · 20 m²</p>
+
+                            <strong id="roomPrice">$150 / month</strong>
+                        </div>
+
+                    </div>
+
+                    <a href="#featured" class="text-link">
+                        Still exploring? View all rooms →
+                    </a>
+
+                </div>
+                <div class="form-step">
+
+                    <div class="step-heading">
+                        <span class="step-number">2</span>
+
+                        <div>
+                            <h3>Pick a date and time</h3>
+                            <p>Choose your preferred visit schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="visitDate">
+                                Visit date <span>*</span>
+                            </label>
+
+                            <input
+                                type="date"
+                                id="visitDate"
+                                name="visitDate"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="visitTime">
+                                Preferred time <span>*</span>
+                            </label>
+
+                            <select id="visitTime" name="visitTime" required>
+                                <option value="">Choose time</option>
+                                <option>09:00 AM</option>
+                                <option>10:00 AM</option>
+                                <option>11:00 AM</option>
+                                <option>01:00 PM</option>
+                                <option>02:00 PM</option>
+                                <option>03:00 PM</option>
+                                <option>04:00 PM</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <p class="form-note">
+                        ⏱ Allow 20–30 minutes · Phnom Penh time (GMT+7)
+                    </p>
+
+                </div>
+                <div class="form-step">
+
+                    <div class="step-heading">
+                        <span class="step-number">3</span>
+
+                        <div>
+                            <h3>Your contact details</h3>
+                            <p>How can our team reach you?</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullName">
+                            Full name <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone number <span>*</span>
+                        </label>
+
+                        <div class="phone-input">
+                            <span>+855</span>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter phone number"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            Email address <small>(optional)</small>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">
+                            Message <small>(optional)</small>
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Tell us what you're looking for or ask a question..."
+                        ></textarea>
+                    </div>
+
+                </div>
+                <div class="form-submit">
+
+                    <p>
+                        Your details are only used to arrange this visit.
+                        By booking, you agree to our
+                        <a href="#">Privacy Policy</a>.
+                    </p>
+
+                    <button type="submit" class="submit-button">
+                        Book my visit <span>→</span>
+                    </button>
+
+                    <small>No payment needed. No commitment to rent.</small>
+                </div>
+            </form>
+
+            <aside class="booking-sidebar">
+
+                <div class="sidebar-card">
+
+                    <span class="section-label">YOUR VISIT</span>
+
+                    <h3>A simple, supported visit</h3>
+
+                    <div class="visit-step">
+
+                        <span class="sidebar-number">1</span>
+
+                        <div>
+                            <h4>We confirm with you</h4>
+                            <p>
+                                Our team will contact you to confirm
+                                availability and share the meeting point.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="visit-step">
+
+                        <span class="sidebar-number">2</span>
+
+                        <div>
+                            <h4>See the room in person</h4>
+                            <p>
+                                Meet our local team, explore the room
+                                and ask about rent, bills and safety.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="visit-step">
+
+                        <span class="sidebar-number">3</span>
+
+                        <div>
+                            <h4>Decide in your own time</h4>
+                            <p>
+                                Bring a friend or family member.
+                                There's no pressure to make a decision.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="help-card">
+
+                    <div class="help-icon">✦</div>
+
+                    <h3>Need help arranging a visit?</h3>
+
+                    <p>
+                        Talk to us. We're here to help you find
+                        a safe room in Phnom Penh.
+                    </p>
+
+                    <a href="tel:+85512345678" class="help-phone">
+                        ☎ +855 12 345 678
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer id="contact">
+    <div class="container">
+      <div class="f-grid">
+        <div class="f-brand">
+          <a href="#" class="logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 11l9-8 9 8" />
+              <path d="M5 10v10h14V10" />
+              <path d="M10 20v-6h4v6" />
+            </svg>
+            Home Hunt KH
+          </a>
+          <p class="slogan">Find Your Perfect Place</p>
+          <p>We provide safe, comfortable and affordable rooms and condos for students and young workers in Phnom Penh.
+            Your trusted partner in finding a better home.</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Telegram">t</a>
+            <a href="#" aria-label="TikTok">tk</a>
+            <a href="#" aria-label="YouTube">yt</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#featured">Listings</a></li>
+            <li><a href="#">Property details</a></li>
+            <li><a href="#contact">Book a visit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Our Areas</h4>
+          <ul>
+            <li><a href="#">Toul Kork</a></li>
+            <li><a href="#">BKK1</a></li>
+            <li><a href="#">Sen Sok</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <ul>
+            <li>Toul Kork, Phnom Penh, Cambodia</li>
+            <li><a href="tel:+85512345678">+855 12 345 678</a></li>
+            <li><a href="mailto:info@homehuntkh.com">info@homehuntkh.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">
+        <span>&copy; 2026 Home Hunt KH. All rights reserved.</span>
+        <span>Made in Phnom Penh, Cambodia</span>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+    const rooms = {
+        "Sunny room near RUPP": {
+            location: "Toul Kork",
+            size: "Room · 20 m²",
+            price: "$150 / month",
+            image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=400&q=80"
+        },
+
+        "Modern studio in BKK1": {
+            location: "BKK1",
+            size: "Studio · 30 m²",
+            price: "$250 / month",
+            image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&q=80"
+        },
+
+        "Comfortable room in Sen Sok": {
+            location: "Sen Sok",
+            size: "Room · 25 m²",
+            price: "$180 / month",
+            image: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=400&q=80"
+        }
+    };
+    const propertySelect = document.getElementById("property");
+
+    propertySelect.addEventListener("change", function () {
+
+        const selectedRoom = rooms[this.value];
+
+        if (selectedRoom) {
+
+            document.getElementById("roomLocation").textContent =
+                selectedRoom.location;
+
+            document.getElementById("roomName").textContent =
+                this.value;
+
+            document.getElementById("roomSize").textContent =
+                selectedRoom.size;
+
+            document.getElementById("roomPrice").textContent =
+                selectedRoom.price;
+
+            document.getElementById("roomImage").src =
+                selectedRoom.image;
+
+            document.getElementById("roomImage").alt =
+                this.value;
+        }
+    });
+    const visitDate = document.getElementById("visitDate");
+
+    const today = new Date();
+
+    const localToday =
+        today.getFullYear() + "-" +
+        String(today.getMonth() + 1).padStart(2, "0") + "-" +
+        String(today.getDate()).padStart(2, "0");
+
+    visitDate.min = localToday;
+    const visitForm = document.getElementById("visitForm");
+
+    visitForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const name = document.getElementById("fullName").value;
+        const property = propertySelect.value;
+        const date = visitDate.value;
+        const time = document.getElementById("visitTime").value;
+
+        alert(
+            "Thank you, " + name + "!\n\n" +
+            "Your visit request has been prepared.\n\n" +
+            "Property: " + property + "\n" +
+            "Date: " + date + "\n" +
+            "Time: " + time + "\n\n" +
+            "Our team will contact you to confirm your visit."
+        );
+
+        visitForm.reset();
+
+    });
+
+</script>
+
+</main>
+
+</body>
+</html>
